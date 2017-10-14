@@ -1,3 +1,10 @@
+html,body{
+	min-height: 100%;
+}
+body{
+    font-family: Verdana;
+    background-color: #eee;
+}
 #wrapper {
   width: 800px;
   margin: 0 auto;
@@ -10,12 +17,17 @@
 
 #gameboard {
   margin: 0 auto;
-  width: 610px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  /*width: 610px;*/
 }
 
 #message {
   text-align: center;
   padding: 20px;
+  font-size: 2rem;
 }
 
 .btn {
@@ -34,15 +46,44 @@
 .btn:hover {
   background: #3cb0fd;
   text-decoration: none;
+  cursor:pointer;
 }
 
 .flipImage {
+  animation: fade-in .2s linear;
   width: 100%;
   border: 1px solid black;
 }
+.flipImage[src="images/back.jpg"]:hover{
+	cursor: pointer;
+}
+.flipImage:not([src="images/back.jpg"]),.flipImage[src="images/back.jpg"]:hover{
+	filter: drop-shadow(5px 5px rgba(0,0,0,.2));
+}
+.flipImage:not([src="images/back.jpg"]){
+	animation: rot-in .2s linear;
+}
 
 .gameTile {
-  padding: 2px;
+  margin:5px;
+  padding: 5px;
   width: 196px;
   display: inline-block;
+  animation: fade-in .2s linear;
+}
+.gameTile > .gameTile{
+	margin:0;
+	padding:0;
+}
+
+@keyframes rot-in{
+	0%{
+		transform: rotateY(40deg);
+	}
+}
+
+@keyframes fade-in{
+	0%{
+		opacity:0;
+	}
 }
