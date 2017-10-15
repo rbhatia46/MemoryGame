@@ -71,6 +71,7 @@ body{
   display: inline-block;
   animation: fade-in .2s linear;
 }
+
 .gameTile > .gameTile{
 	margin:0;
 	padding:0;
@@ -87,3 +88,4 @@ body{
 		opacity:0;
 	}
 }
+
