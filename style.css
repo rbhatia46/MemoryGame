@@ -2,7 +2,7 @@ html,body{
 	min-height: 100%;
 }
 body{
-    font-family: Verdana;
+    font-family: sans-serif;
     background-color: #eee;
 }
 #wrapper {
@@ -47,6 +47,7 @@ body{
   background: #3cb0fd;
   text-decoration: none;
   cursor:pointer;
+  border-color: white;
 }
 
 .flipImage {
@@ -61,7 +62,8 @@ body{
 	filter: drop-shadow(5px 5px rgba(0,0,0,.2));
 }
 .flipImage:not([src="images/back.jpg"]){
-	animation: rot-in .2s linear;
+  animation: rot-in .2s linear;
+  opacity: 0.5;
 }
 
 .gameTile {
