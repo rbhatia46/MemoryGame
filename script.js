@@ -52,6 +52,8 @@ function pickCard(tileIndex, t) {
         cardFlipped = -1;
         if (tileFlippedOver.length == tileArray.length) {
           gameover();
+          startButton.style.display = 'none';
+          message.addEventListener('click', startGame);
         }
       } else {
         message.innerHTML = "No Match";
@@ -79,7 +81,7 @@ function hideCard() {
 
 function gameover() {
   startButton.style.display = 'block';
-  message.innerHTML = "click to start new game";
+  message.innerHTML = "Click to start new game";
   gamePlay = false;
   tileImages = [];
   tileFlippedOver = [];
