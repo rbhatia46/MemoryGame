@@ -35,8 +35,8 @@ function buildArray() {
 function buildBoard() {
   var html = "";
   for (var x = 0; x <= (tileArray.length - 1); x++) {
-    html += '<div class="gameTile"><div class="gameTile">';
-    html += '<img id="cardz' + x + '" src="images/back.jpg" onclick="pickCard(' + x + ',this)" class="flipImage"></div></div>';
+    html += '<div class="gameTile">';
+    html += '<img id="cardz' + x + '" src="images/back.jpg" onclick="pickCard(' + x + ',this)" class="flipImage"></div>';
   }
   gameBoard.innerHTML = html;
 }
