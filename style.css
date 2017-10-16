@@ -14,7 +14,10 @@ body{
   width: 100%;
   border: 1px solid black;
 }
-
+#h1GameTitle{
+  color:white;
+  font-size: 60px;
+}
 #gameboard {
   margin: 0 auto;
   display:flex;
@@ -28,6 +31,7 @@ body{
   text-align: center;
   padding: 20px;
   font-size: 2rem;
+  background-color: inherit;
 }
 
 .btn {
