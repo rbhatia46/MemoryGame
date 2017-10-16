@@ -27,11 +27,11 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333 !important;
+  background-color: lightblue !important;
 }
 body {
   color: #fff;
-  text-align: center;
+  text-align: center ;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
@@ -41,6 +41,8 @@ body {
 
 #message{
   color:white;
+  position: absolute;
+  right: 200px;
 }
 
 .cover{
