@@ -51,19 +51,22 @@ body{
 }
 
 .flipImage {
-  animation: fade-in .2s linear;
   width: 100%;
   border: 1px solid black;
+  transition: transform 0.2s ease;
 }
-.flipImage[src="images/back.jpg"]:hover{
+.flipImage[src="images/back.jpg"]{
 	cursor: pointer;
 }
-.flipImage:not([src="images/back.jpg"]),.flipImage[src="images/back.jpg"]:hover{
-	filter: drop-shadow(5px 5px rgba(0,0,0,.2));
-}
 .flipImage:not([src="images/back.jpg"]){
-  animation: rot-in .2s linear;
-  opacity: 0.5;
+	cursor: not-allowed;
+}
+.flipImage[src="images/back.jpg"]:hover{
+  filter: drop-shadow(5px 5px rgba(0,0,0,.2));
+  transform: translate(-1px, -1px) scale(1.01);
+}
+.flipImage.flipping {
+  animation: rot-in 0.4s linear;
 }
 
 .gameTile {
@@ -80,8 +83,8 @@ body{
 }
 
 @keyframes rot-in{
-	0%{
-		transform: rotateY(40deg);
+	50%{
+		transform: rotateY(90deg);
 	}
 }
 
