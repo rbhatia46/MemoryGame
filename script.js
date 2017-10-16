@@ -36,7 +36,7 @@ function buildBoard() {
   var html = "";
   for (var x = 0; x <= (tileArray.length - 1); x++) {
     html += '<div class="gameTile"><div class="gameTile">';
-    html += '<img id="cardz' + x + '" src="images/back.jpg" onclick="pickCard(' + x + ',this)" class="flipImage"></div></div>';
+    html += '<img id="cardz' + x + '" src="images/back.png" onclick="pickCard(' + x + ',this)" class="flipImage"></div></div>';
   }
   gameBoard.innerHTML = html;
 }
@@ -71,7 +71,7 @@ function pickCard(tileIndex, t) {
 function hideCard() {
   for (var x = 0; x < 2; x++) {
     var vid = tileFlippedOver.pop();
-    document.getElementById(vid).src = "images/back.jpg";
+    document.getElementById(vid).src = "images/back.png";
   }
   clearInterval(timer);
   playLockout = false;
