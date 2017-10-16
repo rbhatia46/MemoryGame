@@ -28,6 +28,7 @@ body{
   text-align: center;
   padding: 20px;
   font-size: 2rem;
+	margin-top: 10px;
 }
 
 .btn {
@@ -55,13 +56,13 @@ body{
   width: 100%;
   border: 1px solid black;
 }
-.flipImage[src="images/back.jpg"]:hover{
+.flipImage[src="images/back.png"]:hover{
 	cursor: pointer;
 }
-.flipImage:not([src="images/back.jpg"]),.flipImage[src="images/back.jpg"]:hover{
-	filter: drop-shadow(5px 5px rgba(0,0,0,.2));
+.flipImage:not([src="images/back.png"]),.flipImage[src="images/back.png"]:hover{
+	filter: drop-shadow(5px 5px rgba(0,0,0,.2)); 
 }
-.flipImage:not([src="images/back.jpg"]){
+.flipImage:not([src="images/back.png"]){
   animation: rot-in .2s linear;
   opacity: 0.5;
 }
@@ -90,4 +91,3 @@ body{
 		opacity:0;
 	}
 }
-
