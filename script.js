@@ -57,7 +57,7 @@ function pickCard(tileIndex, t) {
         }
       } else {
         message.innerHTML = "No Match";
-        timer = setInterval(hideCard, 1500);
+        timer = setInterval(hideCard, 1000);
       }
     } else {
       cardFlipped = tileIndex;
@@ -71,8 +71,7 @@ function pickCard(tileIndex, t) {
 function hideCard() {
   for (var x = 0; x < 2; x++) {
     var vid = tileFlippedOver.pop();
-    var cardElement = document.getElementById(vid);
-    flipCardAnimation(cardElement, "images/back.jpg");
+    document.getElementById(vid).src = "images/back.jpg";
   }
   clearInterval(timer);
   playLockout = false;
@@ -93,20 +92,8 @@ function isinArray(v, array) {
 }
 
 function cardFlip(t, ti) {
-  flipCardAnimation(t, "images/" + tileArray[ti])
+  t.src = "images/" + tileArray[ti];
   tileFlippedOver.push(t.id);
-}
-
-function flipCardAnimation(cardElement, image) {
-  var duration = 400;
-  cardElement.classList.add('flipping');
-  setTimeout(function() {
-    // switch the image half way through the flipping animation
-    cardElement.src = image;
-  }, duration / 2);
-  setTimeout(function() {
-    cardElement.classList.remove('flipping');
-  }, duration);
 }
 
 function checkSrc(v) {
