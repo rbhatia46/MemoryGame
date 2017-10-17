@@ -5,7 +5,6 @@ html, body {
 body {
     font-family: sans-serif;
     background-color: #eee;
-    overflow: hidden;
 }
 
 #wrapper {
@@ -18,13 +17,18 @@ body {
     border: 1px solid black;
 }
 
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+}
+
 #gameboard {
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    /*width: 610px;*/
 }
 
 #message, #score {
@@ -85,19 +89,6 @@ body {
     padding: 0;
 }
 
-
-.bg {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    
-
-img {
-    width: 196px;
-    height: 130.66px;
-
-}
-
 @keyframes rot-in {
     0% {
         transform: rotateY(40deg);
@@ -107,5 +98,11 @@ img {
 @keyframes fade-in {
     0% {
         opacity: 0;
+    }
+}
+
+@media (min-width: 320px) {
+    .container {
+        width: 100%;
     }
 }
