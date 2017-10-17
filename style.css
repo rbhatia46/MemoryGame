@@ -5,6 +5,7 @@ html, body {
 body {
     font-family: sans-serif;
     background-color: #eee;
+    overflow: hidden;
 }
 
 #wrapper {
@@ -84,9 +85,17 @@ body {
     padding: 0;
 }
 
+
+.bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    
+
 img {
     width: 196px;
     height: 130.66px;
+
 }
 
 @keyframes rot-in {
