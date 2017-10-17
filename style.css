@@ -85,11 +85,17 @@ body {
     padding: 0;
 }
 
+
 .bg {
     position: absolute;
     height: 100%;
     width: 100%;
     
+
+img {
+    width: 196px;
+    height: 130.66px;
+
 }
 
 @keyframes rot-in {
