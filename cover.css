@@ -3,52 +3,76 @@
  */
 
 /* Links */
-a,
-a:focus,
-a:hover {
-  color: #fff;
+
+a, a:focus, a:hover {
+    color: #fff;
 }
 
 /* Custom default button */
-.btn-default,
-.btn-default:hover,
-.btn-default:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: 1px solid #fff;
-}
 
+.btn-default, .btn-default:hover, .btn-default:focus {
+    color: #333;
+    text-shadow: none;
+    /* Prevent inheritance from `body` */
+    background-color: #fff;
+    border: 1px solid #fff;
+}
 
 /*
  * Base structure
  */
 
-html,
-body {
-  height: 100%;
-  background-color: #333 !important;
+html, body {
+    height: 100%;
+    background-color: #6C7A89 !important;
 }
+
 body {
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+}
+
+.cover {
+    margin: 20px;
+    padding: 5px;
+}
+
+.game-title {
+    color: white;
+    text-shadow: none;
+    margin-top: 50px;
+}
+
+.game-title>h1 {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 5.0em;
+}
+
+#score, #message {
+    color: white
+}
+
+#message {
+    background-color: #D24D57;
 }
 
 #score {
-  color: white
+    background-color: #1BA39C;
 }
 
-#message{
-  color:white;
+#main {
+    border: 1px solid white;
 }
 
-.cover{
-    margin: 20px;
-    padding: 5px;
-
+#start {
+    background-color: #013243;
+    width: 35%;
+    margin: 0 auto;
 }
 
-#main{
-  border: 1px solid white;
+#start, #message, #score {
+    border: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-shadow: none;
 }
