@@ -10,6 +10,10 @@ var startButton = document.getElementById('start');
 var gameBoard = document.getElementById('gameboard');
 var message = document.getElementById('message');
 
+particlesJS.load('particles-js', 'assets/particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});
+
 //event listens
 startButton.addEventListener('click', startGame);
 
