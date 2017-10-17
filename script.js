@@ -23,7 +23,7 @@ function startGame() {
     tileArray = tileImages.concat(tileImages);
     shuffleArray(tileArray);
     buildBoard();
-    message.innerHTML = "Click any tile";
+    message.innerHTML = "Click any tile!";
   }
 }
 
