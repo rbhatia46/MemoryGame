@@ -29,7 +29,7 @@ function startGame() {
 
 function buildArray() {
   for (var x = 1; x < 7; x++) {
-    tileImages.push('http://thecatapi.com/api/images/get?format=src&type=jpg&size=med&timestamp=' + x);
+    tileImages.push(x + '.jpg');
   }
 }
 function buildBoard() {
@@ -92,7 +92,7 @@ function isinArray(v, array) {
 }
 
 function cardFlip(t, ti) {
-  t.src = tileArray[ti];
+  t.src = "images/" + tileArray[ti];
   tileFlippedOver.push(t.id);
 }
 

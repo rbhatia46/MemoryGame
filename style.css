@@ -84,11 +84,6 @@ body {
     padding: 0;
 }
 
-img {
-    width: 196px;
-    height: 130.66px;
-}
-
 @keyframes rot-in {
     0% {
         transform: rotateY(40deg);
