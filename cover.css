@@ -24,7 +24,6 @@ a, a:focus, a:hover {
 
 html, body {
     height: 100%;
-    background-color: #6C7A89 !important;
 }
 
 body {
@@ -54,15 +53,11 @@ body {
 }
 
 #message {
-    background-color: #D24D57;
+    background-color: rgba(0, 0, 0, .5);
 }
 
 #score {
     background-color: #1BA39C;
-}
-
-#main {
-    border: 1px solid white;
 }
 
 #start {
