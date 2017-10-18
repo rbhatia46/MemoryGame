@@ -28,8 +28,7 @@ html,
 body {
   height: 100%;
   background-color: #333 !important;
-}
-body {
+
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
@@ -47,6 +46,17 @@ body {
   margin:20px;
 }
 
-#main{
-  border: 1px solid white;
+.main{
+ /* border: 1px solid white;*/
+  margin-top: 40px;
+}
+
+#inner_left{
+  border-right : 1px solid white;
+  height: 100%; 
+}
+
+#inner_right{
+  border-left : 1px solid white;
+  height: 100%; 
 }

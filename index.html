@@ -9,16 +9,32 @@
 <body>
 <div class="container">
 	<div class="row">
-		 <div id="wrapper">
-		 	<div class="inner cover">
-				<button class="btn btn-primary btn-lg btn-block" id="start" class="btn">Start</button>
-				<div class="label label-success" id="score"></div>
-		    	<div class="label label-warning" id="message"></div>
-		 	</div>
+		<div id="wrapper">
+
+			<div class="col-sm-3" id="inner_left1">
+				<div class="inner cover" >
+					<button class="btn btn-primary btn-lg btn-block" id="start" class="btn">Start</button>
+					
+			 	</div>
+			</div>
+
+			<div class="col-sm-9" id="inner_right">
+
+				    <div class="btn btn-success pull-right">
+				    	Score : <span id="score"></span> 
+				    </div>
+
+			    	<div class="label label-warning pull-left" id="message"></div>
+
+				    <div class="main pull-right">
+				    	<div id="gameboard"></div>
+				    </div>
+				
+			</div>
+
+		</div>	
 		    
-		    
-		    <div stlye="main"><div id="gameboard"></div></div>
-		  </div>
+		
 	</div>
 </div>
 

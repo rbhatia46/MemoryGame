@@ -9,6 +9,7 @@ var gamePlay = false; // controls if we rebuild the board restart
 var startButton = document.getElementById('start');
 var gameBoard = document.getElementById('gameboard');
 var message = document.getElementById('message');
+var score = document.getElementById('score');
 
 //event listens
 startButton.addEventListener('click', startGame);
@@ -24,6 +25,7 @@ function startGame() {
     shuffleArray(tileArray);
     buildBoard();
     message.innerHTML = "Click any tile";
+    score.innerHTML = "0";
   }
 }
 
@@ -48,6 +50,8 @@ function pickCard(tileIndex, t) {
       playLockout = true;
       if (checkSrc(tileFlippedOver[tileFlippedOver.length - 1]) == checkSrc(tileFlippedOver[tileFlippedOver.length - 2])) {
         message.innerHTML = "Match Found.  Click more tiles";
+        score.innerHTML = parseInt(score.innerHTML) + 1;
+
         playLockout = false;
         cardFlipped = -1;
         if (tileFlippedOver.length == tileArray.length) {
