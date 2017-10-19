@@ -9,29 +9,37 @@ var gamePlay = false; // controls if we rebuild the board restart
 var startButton = document.getElementById('start');
 var gameBoard = document.getElementById('gameboard');
 var message = document.getElementById('message');
-var score = document.getElementById('score');
+var score_div = document.getElementById('score_div');
+
+particlesJS.load('particles-js', 'particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});
 
 //event listens
 startButton.addEventListener('click', startGame);
+score_div.style.display = 'none';
+
 
 function startGame() {
+  //console.log('in')
   cardFlipped = -1;
   playLockout = false;
   startButton.style.display = 'none';
+  score_div.style.display = 'block';
   if (!gamePlay) {
     gamePlay = true;
     buildArray();
     tileArray = tileImages.concat(tileImages);
     shuffleArray(tileArray);
     buildBoard();
-    message.innerHTML = "Click any tile";
+    message.innerHTML = "Click any tile!";
     score.innerHTML = "0";
   }
 }
 
 function buildArray() {
   for (var x = 1; x < 7; x++) {
-    tileImages.push(x + '.jpg');
+    tileImages.push('http://thecatapi.com/api/images/get?format=src&type=jpg&size=med&timestamp=' + x);
   }
 }
 function buildBoard() {
@@ -50,13 +58,16 @@ function pickCard(tileIndex, t) {
       playLockout = true;
       if (checkSrc(tileFlippedOver[tileFlippedOver.length - 1]) == checkSrc(tileFlippedOver[tileFlippedOver.length - 2])) {
         message.innerHTML = "Match Found.  Click more tiles";
-        score.innerHTML = parseInt(score.innerHTML) + 1;
-
         playLockout = false;
         cardFlipped = -1;
+        score.innerHTML = parseInt(score.innerHTML) + 1;
+
         if (tileFlippedOver.length == tileArray.length) {
           gameover();
+          startButton.style.display = 'block';
+          message.addEventListener('click', startGame);
         }
+
       } else {
         message.innerHTML = "No Match";
         timer = setInterval(hideCard, 1000);
@@ -83,7 +94,7 @@ function hideCard() {
 
 function gameover() {
   startButton.style.display = 'block';
-  message.innerHTML = "click to start new game";
+  message.innerHTML = "Click to start new game";
   gamePlay = false;
   tileImages = [];
   tileFlippedOver = [];
@@ -94,7 +105,7 @@ function isinArray(v, array) {
 }
 
 function cardFlip(t, ti) {
-  t.src = "images/" + tileArray[ti];
+  t.src = tileArray[ti];
   tileFlippedOver.push(t.id);
 }
 
