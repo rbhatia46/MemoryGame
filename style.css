@@ -79,6 +79,12 @@ body{
 	padding:0;
 }
 
+#timer {
+  text-align: right;
+  padding: 20px;
+  font-size: 2rem;
+}
+
 @keyframes rot-in{
 	0%{
 		transform: rotateY(40deg);

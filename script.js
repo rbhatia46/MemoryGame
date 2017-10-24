@@ -5,6 +5,11 @@ var cardFlipped = -1;
 var timer = '';
 var playLockout = false;
 var gamePlay = false; // controls if we rebuild the board restart
+var mm = 0;
+var ss = 0;
+var ms = 0;
+var time = 0;
+var countTimer = '';
 
 var startButton = document.getElementById('start');
 var gameBoard = document.getElementById('gameboard');
@@ -17,6 +22,11 @@ function startGame() {
   cardFlipped = -1;
   playLockout = false;
   startButton.style.display = 'none';
+  time = 0; mm = 0; ss = 0; ms = 0;
+  countTimer = setInterval(incrementTimer, 1);
+
+
+
   if (!gamePlay) {
     gamePlay = true;
     buildArray();
@@ -85,6 +95,7 @@ function gameover() {
   gamePlay = false;
   tileImages = [];
   tileFlippedOver = [];
+  clearInterval(countTimer);
 }
 
 function isinArray(v, array) {
@@ -109,4 +120,21 @@ function shuffleArray(array) {
     array[holder] = itemValue;
   }
   return array;
+}
+
+function incrementTimer() {
+  time = time + 4;
+  if (time > 1000) {
+    ss = ss + 1;
+    if (ss > 59) {
+      mm += 1;
+      ss = 0;
+    }
+    time = 0;
+  }
+  var mmShow = mm == 0 ? '00' : mm < 10 && mm > 0 ? '0' + mm : mm;
+  var ssShow = ss == 0 ? '00' : ss < 10 && ss > 0 ? '0' + ss : ss;
+  var msShow = Math.ceil(time / 10);
+
+  document.getElementById("timer").innerHTML = mmShow + ":" + ssShow + ":" + msShow;
 }
