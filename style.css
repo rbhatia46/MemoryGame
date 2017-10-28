@@ -8,6 +8,11 @@ body {
     overflow: hidden;
 }
 
+.container {
+	position: relative;
+	z-index: 1;
+}
+
 #wrapper {
     width: 800px;
     margin: 0 auto;
