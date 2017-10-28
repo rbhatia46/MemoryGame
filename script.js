@@ -36,11 +36,14 @@ function buildArray() {
     tileImages.push('http://thecatapi.com/api/images/get?format=src&type=jpg&size=med&timestamp=' + x);
   }
 }
+
+
 function buildBoard() {
   var html = "";
   for (var x = 0; x <= (tileArray.length - 1); x++) {
     html += '<div class="gameTile"><div class="gameTile">';
     html += '<img id="cardz' + x + '" src="images/back.jpg" onclick="pickCard(' + x + ',this)" class="flipImage"></div></div>';
+
   }
   gameBoard.innerHTML = html;
 }
