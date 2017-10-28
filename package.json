@@ -1,0 +1,28 @@
+{
+  "name": "memorygame",
+  "version": "1.0.0",
+  "description": "A memory game built in JavaScript implementing all the basic concepts of Vanilla JS.",
+  "scripts": {
+    "start": "node ./start-script.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rbhatia46/MemoryGame.git"
+  },
+  "keywords": [
+    "memory",
+    "game",
+    "memorygame"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rbhatia46/MemoryGame/issues"
+  },
+  "homepage": "https://github.com/rbhatia46/MemoryGame#readme",
+  "dependencies": {
+    "connect": "^3.6.5",
+    "serve-static": "^1.13.1"
+  }
+}
