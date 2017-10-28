@@ -76,3 +76,20 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     text-shadow: none;
 }
+
+/*
+################
+Resize images to fill only the card space
+################
+*/
+
+.gameTile {
+  width: 196px;
+  height: 130px;
+  float: left;
+}
+.flipImage {
+  width: 196px;
+  height: 130px;
+  float: left;
+}

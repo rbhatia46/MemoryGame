@@ -29,8 +29,11 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    /*width: 610px;*/
+    width: 800px;
+    height: 540;
+    padding: 24px;
 }
+
 
 #message, #score {
     text-align: center;
@@ -95,7 +98,7 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
-    
+
 
 img {
     width: 196px;
