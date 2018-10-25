@@ -46,7 +46,10 @@ body {
 
 .game-title>h1 {
     font-family: 'Hammersmith One', sans-serif;
-    font-size: 5.0em;
+    font-size: 3em;
+}
+.game-title>h4 {
+    font-size: 1.5em;
 }
 
 #score, #message {
