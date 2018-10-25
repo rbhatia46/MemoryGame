@@ -34,8 +34,8 @@ body {
 
 #message, #score {
     text-align: center;
-    padding: 15px;
-    font-size: 2rem;
+    padding: 10px;
+    font-size: 1.2em;
     width: 35%;
 }
 
@@ -80,7 +80,7 @@ body {
 .gameTile {
     margin: 5px;
     padding: 5px;
-    width: 196px;
+    width: 160px;
     display: inline-block;
     animation: fade-in .2s linear;
 }
@@ -95,11 +95,11 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
-    
+}
 
 img {
     width: 196px;
-    height: 130.66px;
+    height: 110px;
 
 }
 
